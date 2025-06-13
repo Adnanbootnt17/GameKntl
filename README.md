@@ -1,3 +1,4 @@
+# 📌 BOT RAWAN BANNED
 #  🛠️ Auto Claim & Factory Bot Configurator
 
 Skript otomatis untuk klaim area dan jalankan pabrik di platform mining berbasis API. Dikustomisasi penuh melalui `config.json`.
