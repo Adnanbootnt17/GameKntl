@@ -1,10 +1,10 @@
-#  Auto Claim & Factory Bot Configurator
+#  🛠️ Auto Claim & Factory Bot Configurator
 
 Skript otomatis untuk klaim area dan jalankan pabrik di platform mining berbasis API. Dikustomisasi penuh melalui `config.json`.
 
 ---
 
-## ðŸ“ Konfigurasi `config.json`
+## 📁Konfigurasi `config.json`
 
 Semua pengaturan bot diatur melalui file `config.json`. Berikut struktur dasarnya:
 
@@ -49,7 +49,7 @@ Semua pengaturan bot diatur melalui file `config.json`. Berikut struktur dasarny
 }
 ```
 
-### âœï¸ Penjelasan Singkat
+### 📃 Penjelasan Singkat
 - **`mineId`**: ID tambang utama yang dimiliki akun.
 - **`mineInterval`**: Interval waktu mining (dalam milidetik).
 - **`areas`**: Daftar area yang bisa diklaim (klaim otomatis).
@@ -57,26 +57,26 @@ Semua pengaturan bot diatur melalui file `config.json`. Berikut struktur dasarny
 
 ---
 
-## ðŸ” Lisensi & Akses
+## 📜 Lisensi & Akses
 
-ðŸ”‘ **Lisensi Wajib**  
+‘ **Lisensi Wajib**  
 Untuk menjalankan script ini, Anda membutuhkan lisensi valid dari API berikut:
 
-**ðŸŒ [rest-api.adnanboot.my.id](https://rest-api.adnanboot.my.id)**
+***📄 [rest-api.adnanboot.my.id](https://rest-api.adnanboot.my.id)**
 
-ðŸŽ **Trial:** 1 Hari Gratis  
-ðŸ’¬ Hubungi admin untuk pembelian lisensi open source.
-
----
-
-## ðŸ“ž Kontak & Komunitas
-
-ðŸ‘¤ **Admin Telegram:** [`@Nnuuuyyyy18`](https://t.me/Nnuuuyyyy18)  
-ðŸ“¢ **Channel Update:** [DropBotHunter](https://t.me/DropBotHunter)
+ **Trial:** 1 Hari Gratis  
+📜 Hubungi admin untuk pembelian lisensi open source.
 
 ---
 
-## ðŸ–¥ï¸ Requirements
+## 📕 Kontak & Komunitas
+
+📞 **Admin Telegram:** [`@Nnuuuyyyy18`](https://t.me/Nnuuuyyyy18)  
+📞 **Channel Update:** [DropBotHunter](https://t.me/DropBotHunter)
+
+---
+
+## 📕 Requirements
 
 - Node.js v18+
 - File `config.json` yang sudah disesuaikan
@@ -88,15 +88,15 @@ npm install
 
 Jalankan bot:
 ```bash
-node main.js
+node bot.js
 ```
 
 ---
 
-## ðŸ’¡ Tips
+## 📕 Tips
 - Gunakan interval mining minimal 60.000 ms (1 menit) agar tidak banned.
 - Pastikan ID-ID sudah benar dan terverifikasi dari server target.
 
 ---
 
-> ðŸ”’ Bot ini dibuat untuk penggunaan pribadi dan edukasi. Tidak disarankan digunakan untuk aktivitas ilegal atau spam.
+> 🔐”’ Bot ini dibuat untuk penggunaan pribadi dan edukasi. Tidak disarankan digunakan untuk aktivitas ilegal atau spam.
