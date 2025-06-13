@@ -1,0 +1,41 @@
+{
+  "//": "--- PENGATURAN GLOBAL ---",
+  "claimInterval_default": 125000,
+  "enableFactory": true,
+  "enableArea": true,
+  "delayBetweenAccounts": 10000,
+
+  "//": "--- PENGATURAN PER AKUN ---",
+  "accounts": {
+    "1": {
+      "//": "Satu tambang utama per akun",
+      "mine": {
+        "mineId": "ID_MINE_UTAMA_ANDA",
+        "mineInterval": 120000
+      },
+      "//": "Daftar SEMUA area yang bisa di-claim",
+      "areas": [
+        { "areaId": "ID_AREA_UNTUK_MUD", "amountToClaim": 10, "resourceName": "MUD Area" },
+        { "areaId": "ID_AREA_UNTUK_CLAY", "amountToClaim": 5, "resourceName": "CLAY Area" },
+        { "areaId": "ID_AREA_LAINNYA", "amountToClaim": 20, "resourceName": "Main Area" }
+      ],
+      "//": "Daftar SEMUA pabrik yang mau dijalankan",
+      "factories": [
+              { "factoryId": "ID_FACTORY_MUD_1", "resourceName": "MUD Factory 1" },
+        { "factoryId": "ID_FACTORY_CLAY_1", "resourceName": "Clay Factory 1" },
+        { "factoryId": "ID_FACTORY_CLAY_2", "resourceName": "Clay Factory 2" },
+        { "factoryId": "ID_FACTORY_SAND_1", "recipeId": "ID_RESEP_UNTUK_PASIR", "resourceName": "Sand Factory" }
+      ]
+    },
+    "2": {
+      "mine": {
+        "mineId": "ID_MINE_AKUN_2",
+        "mineInterval": 120000
+      },
+      "areas": [
+        { "areaId": "ID_AREA_AKUN_2", "amountToClaim": 15, "resourceName": "Area Akun 2" }
+      ],
+      "factories": []
+    }
+  }
+}
