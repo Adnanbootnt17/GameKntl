@@ -84,6 +84,8 @@ Untuk menjalankan script ini, Anda membutuhkan lisensi valid dari API berikut:
 
 Install dependencies:
 ```bash
+git clone https://github.com/Adnanbootnt17/GameKntl.git
+cd GameKntl
 npm install
 ```
 
