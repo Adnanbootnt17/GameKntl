@@ -49,6 +49,11 @@ Semua pengaturan bot diatur melalui file `config.json`. Berikut struktur dasarny
   }
 }
 ```
+## 📁Konfigurasi `.env`
+
+``` .env
+LICENSE_API_URL=LINK JANGAN DIHAPUS
+LICENSE_KEY=xxxxISI_LISENSI_LUxccccccc```
 
 ### 📃 Penjelasan Singkat
 - **`mineId`**: ID tambang utama yang dimiliki akun.
