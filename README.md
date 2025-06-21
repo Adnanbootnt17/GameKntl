@@ -11,40 +11,121 @@ Semua pengaturan bot diatur melalui file `config.json`. Berikut struktur dasarny
 
 ```jsonc
 {
-  "//": "--- PENGATURAN GLOBAL ---",
-  "claimInterval_default": 125000, // Waktu antar klaim (dalam ms)
-  "enableFactory": true,           // Aktifkan pabrik
-  "enableArea": true,              // Aktifkan area klaim
-  "delayBetweenAccounts": 10000,   // Delay antar akun (ms)
+  "enableTasks": true,               // Aktifkan auto-task
+  "delayBetweenAccounts": 10000,    // Delay antar akun (ms)
 
-  "//": "--- PENGATURAN PER AKUN ---",
   "accounts": {
     "1": {
-      "mine": {
-        "mineId": "ID_MINE_UTAMA_ANDA",
-        "mineInterval": 120000
+      "resourceSources": {          // ID sumber daya dari area
+        "EARTH": "ID_AREA_EARTH",
+        "MUD": "ID_AREA_MUD",
+        "CLAY": "ID_AREA_CLAY",
+        "SAND": "ID_AREA_SAND",
+        "COPPER": "ID_AREA_COPPER"
       },
-      "areas": [
-        { "areaId": "ID_AREA_UNTUK_MUD", "amountToClaim": 10, "resourceName": "MUD Area" },
-        { "areaId": "ID_AREA_UNTUK_CLAY", "amountToClaim": 5, "resourceName": "CLAY Area" },
-        { "areaId": "ID_AREA_LAINNYA", "amountToClaim": 20, "resourceName": "Main Area" }
-      ],
-      "factories": [
-        { "factoryId": "ID_FACTORY_Mud_1", "resourceName": "Mud Factory 1" },
-        { "factoryId": "ID_FACTORY_CLAY_1", "resourceName": "Clay Factory 1" },
-        { "factoryId": "ID_FACTORY_CLAY_2", "resourceName": "Clay Factory 2" },
-        { "factoryId": "ID_FACTORY_SAND_1", "recipeId": "ID_RESEP_UNTUK_PASIR", "resourceName": "Sand Factory" }
-      ]
-    },
-    "2": {
-      "mine": {
-        "mineId": "ID_MINE_AKUN_2",
-        "mineInterval": 120000
+
+      "trading": {
+        "enabled": true,           // Aktifkan sistem trading
+        "globalCheckInterval": "5 menit", //waktu berapa kali untuk trader
+        "rules": [
+          {
+            "item": "SAND",         // Nama resource
+            "enabled": true,
+            "strategy": "PERCENT_OF_BALANCE",
+            "sell_percent": 25, //jual berapa koin
+            "sellAbove": 500,  //jual pas balance koin 500 ketasa
+            "buy": "COIN"
+          }
+        ]
       },
-      "areas": [
-        { "areaId": "ID_AREA_AKUN_2", "amountToClaim": 15, "resourceName": "Area Akun 2" }
-      ],
-      "factories": []
+
+      "mine": {
+        "enabled": true,           // Aktifkan fitur mining utama
+        "name": "Tambang Utama",
+        "mineId": "ID_MINE",
+        "fullDuration": "1 jam 30 menit", //durasi minung di server berapa
+        "claimInterval": "5 menit 30 detik" //untuk claimnya berapa 
+      },
+
+      "factories": {
+        "mud_production": [
+          {
+            "name": "Mud Factory 1",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 1470, //claim per factory
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"], //durasi mining oer factory
+            "inputCost": { "EARTH": 4230 }, //biaya mining per factory
+            "paksaClaim": false
+          }
+        ],
+
+        "clay_production": [
+          {
+            "name": "Clay Factory 1",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 315,
+            "cooldown": ["30 menit 5 detik", "30 menit 10 detik"],
+            "inputCost": { "MUD": 3050 },
+            "paksaClaim": false
+          }
+        ],
+
+        "sand_production": [
+          {
+            "name": "Sand Factory 1",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 125,
+            "cooldown": ["29 menit 14 detik", "29 menit 15 detik"],
+            "inputCost": { "CLAY": 362 },
+            "paksaClaim": false
+          }
+        ],
+
+        "copper_production": [
+          {
+            "name": "Copper Factory 1",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 7,
+            "cooldown": ["1 jam 53 menit", "1 jam 53 menit 5 detik"],
+            "inputCost": { "SAND": 210 },
+            "paksaClaim": false
+          }
+        ],
+
+        "seawater_production": [
+          {
+            "name": "Seawater Factory",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 1,
+            "cooldown": ["2 jam 5 detik", "2 jam 6 detik"],
+            "inputCost": { "WATER": 8 },
+            "paksaClaim": false
+          }
+        ],
+
+        "heat_production": [
+          {
+            "name": "Heat Factory",
+            "enabled": true,
+            "factoryId": "ID_FACTORY",
+            "areaId": "ID_AREA",
+            "amountToClaim": 1,
+            "cooldown": ["2 jam 30 menit 5 detik", "2 jam 30 menit 6 detik"],
+            "inputCost": { "FIRE": 9 },
+            "paksaClaim": false
+          }
+        ]
+      }
     }
   }
 }
@@ -93,6 +174,7 @@ Install dependencies:
 git clone https://github.com/Adnanbootnt17/GameKntl.git
 cd GameKntl
 npm install
+npm start
 ```
 
 Jalankan bot:
