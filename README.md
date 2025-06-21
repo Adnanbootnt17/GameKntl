@@ -174,12 +174,22 @@ Install dependencies:
 git clone https://github.com/Adnanbootnt17/GameKntl.git
 cd GameKntl
 npm install
-npm start
 ```
-
+settings config bot:
+```bash
+nano config.json
+```
+settings privetkey bot:
+```bash
+nano pk.txt
+```
+settings tokenfirebase bot:
+```bash
+nano tokenfirebase.txt
+```
 Jalankan bot:
 ```bash
-node bot.js
+npm start
 ```
 
 ---
