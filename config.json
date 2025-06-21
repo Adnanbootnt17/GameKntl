@@ -1,0 +1,259 @@
+{
+  "enableTasks": true,
+  "delayBetweenAccounts": 10000,
+  "accounts": {
+    "1": {
+      "resourceSources": {
+        "EARTH": "0684d3d3-ff16-7872-8000-120c128352cd",
+        "MUD": "0684d3cf-3a2d-70e5-8000-756f62cf0fb7",
+        "CLAY": "0684d3cf-3a31-726e-8000-89277107c0ad",
+        "SAND": "0684d3cf-3a31-726e-8001-6f81f5034d8c",
+        "COPPER": "0684d949-8dba-75e3-8000-4a01aa7eeaf0"
+      },
+      "trading": {
+        "enabled": false,
+        "globalCheckInterval": "5 menit",
+        "rules": [
+          {
+            "item": "SAND",
+            "enabled": true,
+            "strategy": "PERCENT_OF_BALANCE",
+            "sell_percent": 25,
+            "sellAbove": 500,
+            "buy": "COIN"
+          },
+          {
+            "item": "COPPER",
+            "enabled": true,
+            "strategy": "PERCENT_OF_BALANCE",
+            "sell_percent": 50,
+            "sellAbove": 200,
+            "buy": "COIN"
+          },
+          {
+            "item": "MUD",
+            "enabled": true,
+            "strategy": "EXACT_TARGET_SELL",
+            "sell_at_balance": 10000,
+            "sell_amount": 500,
+            "buy": "COIN"
+          },
+          {
+            "item": "CLAY",
+            "enabled": false
+          }
+        ]
+      },
+      "mine": {
+        "enabled": false,
+        "name": "Tambang Utama",
+        "mineId": "0684d3d3-ff16-7872-8000-120c128352cd",
+        "fullDuration": "1 jam 30 menit",
+        "claimInterval": "5 menit 30 detik"
+      },
+      "factories": {
+        "mud_production": [
+          {
+            "name": "Mud Factory 1",
+            "enabled": false,
+            "factoryId": "0684d3d6-6220-7c49-8000-ed847be45e53",
+            "areaId": "0684d3cf-3a2d-70e5-8000-756f62cf0fb7",
+            "amountToClaim": 1470,
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"],
+            "inputCost": { "EARTH": 4230 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Mud Factory 2",
+            "enabled": false,
+            "factoryId": "0684d6bd-b7db-722d-8000-986090053be8",
+            "areaId": "0684d3cf-3a2d-70e5-8000-756f62cf0fb7",
+            "amountToClaim": 1470,
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"],
+            "inputCost": { "EARTH": 4230 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Mud Factory 3",
+            "enabled": false,
+            "factoryId": "0684d6bd-c676-7c8b-8000-342be2e634d8",
+            "areaId": "0684d3cf-3a2d-70e5-8000-756f62cf0fb7",
+            "amountToClaim": 1470,
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"],
+            "inputCost": { "EARTH": 4230 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Mud Factory 4",
+            "enabled": false,
+            "factoryId": "0684d950-9893-774b-8000-710372515f38",
+            "areaId": "0684d949-8ddf-73b6-8001-729a3c642a11",
+            "amountToClaim": 1470,
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"],
+            "inputCost": { "EARTH": 4230 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Mud Factory 5",
+            "enabled": false,
+            "factoryId": "0684d6bd-b7db-722d-8000-986090053be8",
+            "areaId": "0684d3cf-3a2d-70e5-8000-756f62cf0fb7",
+            "amountToClaim": 1470,
+            "cooldown": ["9 menit 4 detik", "9 menit 8 detik"],
+            "inputCost": { "EARTH": 4230 },
+            "paksaClaim": false
+          }
+        ],
+        "clay_production": [
+          {
+            "name": "Clay Factory 1",
+            "enabled": false,
+            "factoryId": "0684d471-9e41-7893-8000-c4d1a3a4abb0",
+            "areaId": "0684d3cf-3a31-726e-8000-89277107c0ad",
+            "amountToClaim": 315,
+            "cooldown": ["30 menit 5 detik", "30 menit 10 detik"],
+            "inputCost": { "MUD": 3050 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Clay Factory 2",
+            "enabled": false,
+            "factoryId": "0684d3fe-f08f-75c2-8000-2fe7e662d695",
+            "areaId": "0684d3cf-3a31-726e-8000-89277107c0ad",
+            "amountToClaim": 315,
+            "cooldown": ["30 menit 5 detik", "30 menit 10 detik"],
+            "inputCost": { "MUD": 3050 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Clay Factory 3",
+            "enabled": false,
+            "factoryId": "0684e490-4c76-7c8b-8000-f6eafc1321b8",
+            "areaId": "0684d3cf-3a31-726e-8000-89277107c0ad",
+            "amountToClaim": 315,
+            "cooldown": ["30 menit 5 detik", "30 menit 10 detik"],
+            "inputCost": { "MUD": 3050 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Clay Factory 4",
+            "enabled": false,
+            "factoryId": "0684ff61-7828-7f5c-8000-e012f3614eda",
+            "areaId": "0684d3cf-3a31-726e-8000-89277107c0ad",
+            "amountToClaim": 315,
+            "cooldown": ["30 menit 5 detik", "30 menit 10 detik"],
+            "inputCost": { "MUD": 3050 },
+            "paksaClaim": false
+          }
+        ],
+        "sand_production": [
+          {
+            "name": "Sand Factory 1",
+            "enabled": false,
+            "factoryId": "0684d412-662d-70e5-8000-7c93cf650039",
+            "areaId": "0684d3cf-3a31-726e-8001-6f81f5034d8c",
+            "amountToClaim": 125,
+            "cooldown": ["29 menit 14 detik", "29 menit 15 detik"],
+            "inputCost": { "CLAY": 362 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Sand Factory 2",
+            "enabled": false,
+            "factoryId": "0684d6c6-6420-7c49-8000-c969293aee0d",
+            "areaId": "0684d3cf-3a31-726e-8001-6f81f5034d8c",
+            "amountToClaim": 125,
+            "cooldown": ["29 menit 14 detik", "29 menit 15 detik"],
+            "inputCost": { "CLAY": 362 },
+            "paksaClaim": false
+          },
+          {
+            "name": "Sand Factory 3",
+            "enabled": false,
+            "factoryId": "0684ff63-5f47-7ae1-8000-a81a049623aa",
+            "areaId": "0684d3cf-3a31-726e-8001-6f81f5034d8c",
+            "amountToClaim": 125,
+            "cooldown": ["29 menit 14 detik", "29 menit 15 detik"],
+            "inputCost": { "CLAY": 362 },
+            "paksaClaim": false
+          },
+                    {
+            "name": "Sand Factory 4",
+            "enabled": false,
+            "factoryId": "06851094-c814-7f37-8000-fc7d4e1b0a1c",
+            "areaId": "0684d3cf-3a31-726e-8001-6f81f5034d8c",
+            "amountToClaim": 125,
+            "cooldown": ["29 menit 14 detik", "29 menit 15 detik"],
+            "inputCost": { "CLAY": 362 },
+            "paksaClaim": false
+          }
+        ],
+        "copper_production": [
+          {
+            "name": "copper Factory 1",
+            "enabled": false,
+            "factoryId": "0684e484-3b6c-78b4-8000-e6cae314a83e",
+            "areaId": "0684d949-8dba-75e3-8000-4a01aa7eeaf0",
+            "amountToClaim": 7,
+            "cooldown": ["1 jam 53 menit", "1 jam 53 menit 5 detik"],            "inputCost": { "SAND": 210 },
+            "paksaClaim": false
+          },
+          {
+            "name": "copper Factory 2",
+            "enabled": false,
+            "factoryId": "068505a9-f7b2-72d0-8000-ed6a8552cb00",
+            "areaId": "0684ff57-f666-7666-8000-8ff303031a09",
+            "amountToClaim": 7,
+            "cooldown": ["1 jam 53 menit", "1 jam 53 menit 5 detik"],            "inputCost": { "SAND": 210 },
+            "paksaClaim": false
+            },
+            {
+            "name": "copper Factory 3",
+            "enabled": false,
+            "factoryId": "068505ab-4228-7f5c-8000-a71185603c31",
+            "areaId": "0684ff57-f666-7666-8000-8ff303031a09",
+            "amountToClaim": 7,
+            "cooldown": ["1 jam 53 menit", "1 jam 53 menit 5 detik"],            "inputCost": { "SAND": 210 },
+            "paksaClaim": false
+          },
+                      {
+            "name": "copper Factory 4",
+            "enabled": false,
+            "factoryId": "068505af-3dc6-7a7e-8000-153e02372d21",
+            "areaId": "0684d949-8dba-75e3-8000-4a01aa7eeaf0",
+            "amountToClaim": 7,
+            "cooldown": ["1 jam 53 menit", "1 jam 53 menit 5 detik"],            "inputCost": { "SAND": 210 },
+            "paksaClaim": false
+          }
+        ],
+          "seawater_production": [
+                               {
+            "name": "seawater Factory q",
+            "enabled": false,
+            "factoryId": "0684fa6f-b702-70c4-8000-86ad0de90e94",
+            "areaId": "0684f8db-c34b-7c6a-8001-b668deb1e35c",
+            "amountToClaim": 1,
+            "cooldown": ["2 jam 5 detik", "2 jam  6 detik"],
+            "inputCost": { "WATER": 8 },
+            "paksaClaim": false
+          }
+        ],
+          "heat_production": [
+                               {
+            "name": "heat Factory 1",
+            "enabled": false,
+            "factoryId": "06851640-41bb-755a-8000-89dab8f66139",
+            "areaId": "06850429-1083-7126-8004-65003ba01d2c",
+            "amountToClaim": 1,
+            "cooldown": ["2 jam 30 menit 5 detik", "2 jam 30 menit 6 detik"],
+            "inputCost": { "FIRE": 9 },
+            "paksaClaim": false
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+
